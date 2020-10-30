@@ -65,6 +65,8 @@ def unitTest(studentFunction, myNumberFunction):
         print(True)
         game.show_long_text("isCorrect: True! That is all for this demo. Feel free to poke around the files included to the left/modfy them and see what happens!", DialogLayout.BOTTOM)
         print("That is all for this demo. Feel free to poke around the files included to the left/modfy them and see what happens!")
+        if(game.ask_for_number("If you would like to run again, Enter 1 ") == 1):
+            repeatMain()
     else:
         game.show_long_text("That isn't quite right, run the program again and see if you can spot what should happen", DialogLayout.BOTTOM)
         print("That isn't quite right, run the program again and see if you can spot what should happen")

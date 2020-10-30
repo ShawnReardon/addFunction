@@ -57,6 +57,10 @@ function unitTest(studentFunction: number, myNumberFunction: number) {
         console.log(true)
         game.showLongText("isCorrect: True! That is all for this demo. Feel free to poke around the files included to the left/modfy them and see what happens!", DialogLayout.Bottom)
         console.log("That is all for this demo. Feel free to poke around the files included to the left/modfy them and see what happens!")
+        if (game.askForNumber("If you would like to run again, Enter 1 ") == 1) {
+            repeatMain()
+        }
+        
     } else {
         game.showLongText("That isn't quite right, run the program again and see if you can spot what should happen", DialogLayout.Bottom)
         console.log("That isn't quite right, run the program again and see if you can spot what should happen")

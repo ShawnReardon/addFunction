@@ -47,14 +47,28 @@ shouldContinue("Now try writing a function named myStudentFunction that returns 
 //  Bonus: Add parameters to the function and use those to store your values.
 //  Parameters behave like local variables inside a function. It will be setup similiar to Hint 2
 //  Put your funtion below this line! Look at unitTest below for the format of a function definition
-//  Be sure to name your function EXACTLY myStudentFunction() or it will always fail the test (Hint: Copy/Paste the name)
-function unitTest(studentFunction: any, myNumberFunction: any) {
+//  Be sure to name your function EXACTLY myStudentFunction() or it will always fail the test (Hint: remove -> pass)
+function myStudentFunction(): number {
+    return 1
+}
+
+function unitTest(studentFunction: number, myNumberFunction: number) {
     if (studentFunction == myNumberFunction) {
         console.log(true)
+        game.showLongText("isCorrect: True! That is all for this demo. Feel free to poke around the files included to the left/modfy them and see what happens!", DialogLayout.Bottom)
         console.log("That is all for this demo. Feel free to poke around the files included to the left/modfy them and see what happens!")
     } else {
+        game.showLongText("That isn't quite right, run the program again and see if you can spot what should happen", DialogLayout.Bottom)
         console.log("That isn't quite right, run the program again and see if you can spot what should happen")
+        repeatMain()
     }
     
+}
+
+unitTest(myStudentFunction(), result)
+function repeatMain() {
+    
+    result = runDemo()
+    unitTest(myStudentFunction(), result)
 }
 

@@ -36,6 +36,8 @@ def shouldContinue(message = None):
 
 result = runDemo()
 
+
+
 shouldContinue("Now try writing a function named myStudentFunction that returns a value equal to that of add() in the space provided. See hints in comments! If you have already done so, press enter to check your solution...")
 
 # HINT 1: Use input() to prompt user for a value
@@ -51,17 +53,26 @@ shouldContinue("Now try writing a function named myStudentFunction that returns 
 # Parameters behave like local variables inside a function. It will be setup similiar to Hint 2
 
 # Put your funtion below this line! Look at unitTest below for the format of a function definition
-# Be sure to name your function EXACTLY myStudentFunction() or it will always fail the test (Hint: Copy/Paste the name)
+# Be sure to name your function EXACTLY myStudentFunction() or it will always fail the test (Hint: remove -> pass)
 
-
+def myStudentFunction():
+    return 1
 
 
 
 def unitTest(studentFunction, myNumberFunction):
     if (studentFunction == myNumberFunction):
         print(True)
+        game.show_long_text("isCorrect: True! That is all for this demo. Feel free to poke around the files included to the left/modfy them and see what happens!", DialogLayout.BOTTOM)
         print("That is all for this demo. Feel free to poke around the files included to the left/modfy them and see what happens!")
     else:
-      print("That isn't quite right, run the program again and see if you can spot what should happen")
+        game.show_long_text("That isn't quite right, run the program again and see if you can spot what should happen", DialogLayout.BOTTOM)
+        print("That isn't quite right, run the program again and see if you can spot what should happen")
+        repeatMain()
 
-#unitTest(myStudentFunction(),result)
+unitTest(myStudentFunction(),result)
+
+def repeatMain():
+    global result
+    result = runDemo()
+    unitTest(myStudentFunction(),result)

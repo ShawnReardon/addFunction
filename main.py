@@ -56,7 +56,7 @@ shouldContinue("Now try writing a function named myStudentFunction that returns 
 # Be sure to name your function EXACTLY myStudentFunction() or it will always fail the test (Hint: remove -> pass)
 
 def myStudentFunction():
-    return 1
+    pass
 
 
 

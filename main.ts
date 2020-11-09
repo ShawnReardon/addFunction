@@ -48,11 +48,11 @@ shouldContinue("Now try writing a function named myStudentFunction that returns 
 //  Parameters behave like local variables inside a function. It will be setup similiar to Hint 2
 //  Put your funtion below this line! Look at unitTest below for the format of a function definition
 //  Be sure to name your function EXACTLY myStudentFunction() or it will always fail the test (Hint: remove -> pass)
-function myStudentFunction(): number {
-    return 1
+function myStudentFunction() {
+    
 }
 
-function unitTest(studentFunction: number, myNumberFunction: number) {
+function unitTest(studentFunction: any, myNumberFunction: number) {
     if (studentFunction == myNumberFunction) {
         console.log(true)
         game.showLongText("isCorrect: True! That is all for this demo. Feel free to poke around the files included to the left/modfy them and see what happens!", DialogLayout.Bottom)
